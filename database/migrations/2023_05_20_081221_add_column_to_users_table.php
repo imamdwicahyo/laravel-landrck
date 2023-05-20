@@ -15,8 +15,8 @@ return new class extends Migration
             $table->string('NIP')->unique()->nullable();
             $table->string('phone', 15)->nullable();
             $table->string('role');
-            $table->unsignedBigInteger('division_id');
-            $table->unsignedBigInteger('bbwsc_office_id');
+            $table->unsignedBigInteger('division_id')->nullable();
+            $table->unsignedBigInteger('bbwsc_office_id')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn(['NIP', 'phone', 'role', 'division_id', 'bbwsc_office_id']);
         });
     }
 };
