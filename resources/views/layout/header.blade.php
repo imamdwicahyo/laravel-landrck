@@ -139,7 +139,7 @@
                         <div class="dropdown-divider border-top"></div>
                         <a class="dropdown-item text-dark" href="lock-screen.html"><span
                                 class="mb-0 d-inline-block me-1"><i class="ti ti-lock"></i></span> Lockscreen</a>
-                        <a class="dropdown-item text-dark" href="login.html"><span
+                        <a class="dropdown-item text-dark" href="{{ route('auth.logout.action') }}"><span
                                 class="mb-0 d-inline-block me-1"><i class="ti ti-logout"></i></span> Logout</a>
                     </div>
                 </div>

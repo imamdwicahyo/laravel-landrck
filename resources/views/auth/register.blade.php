@@ -46,13 +46,16 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card form-signin p-4 rounded shadow">
-                            <form action="{{ route('auth.login.action') }}" method="post">
+                            <form action="{{ route('auth.regist.action')}}" method="post">
                                 @csrf
-                                <h5 class="mb-3 text-center">Please sign in</h5>
-
+                                <h5 class="mb-3 text-center">Register</h5>
                                 <div class="form-floating mb-2">
-                                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <input type="text" class="form-control" name="name" id="floatingName" placeholder="randi">
+                                    <label for="floatingName">Name</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input type="email" class="form-control" name="email" id="floatingEmail" placeholder="name@example.com">
+                                    <label for="floatingEmail">Email address</label>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">

@@ -21,8 +21,14 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/login', 301);
 
 Route::get('/login', [AuthController::class, 'index'])->name('auth.login.form');
+Route::get('/register', [AuthController::class, 'register'])->name('auth.register.form');
+Route::post('/login', [AuthController::class, 'handleLogin'])->name('auth.login.action');
+Route::post('/register', [AuthController::class, 'handleRegist'])->name('auth.regist.action');
+Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout.action');
 
-Route::prefix('admin')->group(function () {
+//pengunaaan middleware dibawah, untuk mengakases isi maka harus login dulu (menggunakan auth)
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::resource('user', UserController::class, ['as' => 'admin']);
 });
+
