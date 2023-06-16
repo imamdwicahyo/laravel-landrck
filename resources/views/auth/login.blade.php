@@ -72,7 +72,8 @@
                                 <button class="btn btn-primary w-100" type="submit">Sign in</button>
 
                                 <div class="col-12 text-center mt-3">
-                                    <p class="mb-0 mt-3"><small class="text-dark me-2">Don't have an account ?</small> <a href="signup.html" class="text-dark fw-bold">Sign Up</a></p>
+                                    <p class="mb-0 mt-3"><small class="text-dark me-2">Don't have an account ?</small> <a href="{{ route('auth.register.form') }}" class="btn btn-info">Sign Up</a></p>
+                                    
                                 </div><!--end col-->
 
                                 <p class="mb-0 text-muted mt-3 text-center">© <script>document.write(new Date().getFullYear())</script> Landrick.</p>

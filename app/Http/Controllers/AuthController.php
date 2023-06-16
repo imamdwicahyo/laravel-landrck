@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
@@ -54,4 +55,11 @@ class AuthController extends Controller
         auth()->logout();
         return redirect('/login'); // Ubah sesuai dengan URL tujuan setelah logout
     }
+
+    protected function sendFailedLoginResponse(Request $request)
+{
+    throw ValidationException::withMessages([
+        'email' => __('auth.failed'),
+    ])->redirectTo('/login');
+}
 }

@@ -11,7 +11,8 @@
         </div>
 
         <ul class="sidebar-menu">
-            <li><a href="index.html"><i class="ti ti-home me-2"></i>Dashboard</a></li>
+            <li><a href="{{ route('admin.user.index') }}"><i class="ti ti-home me-2"></i>Data User</a></li>
+            <li><a href="{{ route('user.dashboard') }}"><i class="ti ti-home me-2"></i>Data Archive</a></li>
         </ul>
         <!-- sidebar-menu  -->
     </div>

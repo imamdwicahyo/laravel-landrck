@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArchiveController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 
@@ -27,8 +28,15 @@ Route::post('/register', [AuthController::class, 'handleRegist'])->name('auth.re
 Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout.action');
 
 //pengunaaan middleware dibawah, untuk mengakases isi maka harus login dulu (menggunakan auth)
-Route::prefix('admin')->middleware('auth')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {    
     Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::resource('user', UserController::class, ['as' => 'admin']);
+});
+
+//Route::prefix('user')->middleware('auth')->group(function () {
+Route::prefix('user')->group(function () {
+    Route::get('dashboard', [ArchiveController::class, 'index'])->name('user.dashboard');
+    //yang dibawah sebagai prefix atau awalan link, jadi pake /user/..../....
+    Route::resource('archive', ArchiveController::class, ['as' => 'user']);
 });
 
