@@ -19,7 +19,7 @@
             <div class="col-lg-12 mt-4">
                 <div class="card rounded shadow">
                     <div class="p-4 border-bottom">
-                        <h5 class="title mb-0"> Edit Data Archive </h5>
+                        <h5 class="title mb-0"> Edit user </h5>
                     </div>
 
                     <div class="p-4">
@@ -32,37 +32,30 @@
                                     <div class="mb-3">
                                         <label class="form-label">Name <span class="text-danger">*</span></label>
                                         <input name="name" id="name" type="text" class="form-control"
-                                            placeholder="Name" value="{{ $archive->name }}">
+                                            placeholder="Name" value="{{ $office->name }}">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <label class="form-label">Type <span class="text-danger">*</span></label>
-                                        <input name="type" id="type" type="text" class="form-control"
-                                            placeholder="Type" value="{{ $archive->type }}">
+                                        <label class="form-label">Phone <span class="text-danger">*</span></label>
+                                        <input name="type" id="phone" type="text" class="form-control"
+                                            placeholder="Phone" value="{{ $office->phone }}">
                                     </div>
                                 </div>                                
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <label class="form-label">Consultant <span class="text-danger">*</span></label>
-                                        <input name="consultant" id="consultant" type="text" class="form-control"
-                                            placeholder="Consultant" value="{{ $archive->consultant }}">
+                                        <label class="form-label">Address <span class="text-danger">*</span></label>
+                                        <input name="address" id="address" type="text" class="form-control"
+                                            placeholder="Address" value="{{ $archive->address }}">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
-                                        <label class="form-label">Contact Number <span class="text-danger">*</span></label>
-                                        <input name="contract_number" id="contract_number" type="text" class="form-control"
-                                            placeholder="Contract Number" value="{{ $archive->contract_number }}">
+                                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                                        <input name="email" id="email" type="email" class="form-control"
+                                            placeholder="Email" value="{{ $archive->email }}">
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Asal BBWS <span class="text-danger">*</span></label>
-                                        <input name="bbws_office_id" id="bbws_office_id" type="text" class="form-control"
-                                            placeholder="Bbws Office Id" value="{{ $archive->bbws_office_id }}">
-                                    </div>
-                                </div>
+                                </div>                                
                             </div>
                             <!--end row-->
                             <div class="row">

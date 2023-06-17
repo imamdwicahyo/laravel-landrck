@@ -32,7 +32,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Name <span class="text-danger">*</span></label>
                                         <input name="name" id="name" type="text" class="form-control"
-                                            placeholder="Name" value="{{ $user->name }}">
+                                            placeholder="Name" value="{{ $user->name }}">                                            
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -47,6 +47,35 @@
                                         <label class="form-label">Ganti Password <span class="text-danger"></span></label>
                                         <input name="passowrd" id="password" type="password" class="form-control"
                                             placeholder="Password">
+                                    </div>
+                                </div>
+                                {{--  --}}
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Phone <span class="text-danger">*</span></label>
+                                        <input name="phone" id="phone" type="number" class="form-control"
+                                            placeholder="Phone" value="{{ $user->phone }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Role <span class="text-danger">*</span></label>
+                                        <input name="role" id="role" type="text" class="form-control"
+                                            placeholder="Role" value="{{ $user->role }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">ID Division <span class="text-danger">*</span></label>
+                                        <input name="division_id" id="division_id" type="text" class="form-control"
+                                            placeholder="ID Division" value="{{ $user->division_id }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">BBWSC Office Id <span class="text-danger">*</span></label>
+                                        <input name="bbwsc_office_id" id="bbwsc_office_id" type="text" class="form-control"
+                                            placeholder="ID Office" value="{{ $user->bbwsc_office_id }}">
                                     </div>
                                 </div>
                             </div>

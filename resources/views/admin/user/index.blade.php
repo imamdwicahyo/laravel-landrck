@@ -36,7 +36,7 @@
                                     <td>{{ $user->email }}</td>
                                     <td>
                                         <a href="{{ route('admin.user.edit', [$user->id]) }}" class="btn btn-info">Edit</a>
-                                        <form action="{{ route('admin.user.destroy', $user->id) }}" method="POST"
+                                        <form action="{{ route('admin.user.destroy', [$user->id]) }}" method="POST"
                                             id="delete-form">
                                             @csrf
                                             @method('DELETE')

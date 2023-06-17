@@ -7,17 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Archive extends Model
+class BbwscOffice extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $fillable = [
-        'name',
-        'type',
-        'consultant',
-        'contract_number',
-        'bbws_office_id',
-    ];
-
-
+    protected $table = 'bbwsc_office';
+    // protected $fillable = [
+    //     'name',
+    //     'phone',
+    //     'address',
+    //     'email',        
+    // ];
 }

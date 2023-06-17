@@ -15,7 +15,7 @@
 
         <div class="row">
             <div class="card col-12 mt-4 p-3">
-                <a href="{{ route('user.archive.create') }}" class="text-end">
+                {{-- <a href="{{ route('admin.office.create') }}" class="text-end"> --}}
                     <button class="btn btn-primary mb-3">Tambah data</button>
                 </a>
                 <div class="table-responsive rounded">
@@ -24,25 +24,23 @@
                             <tr>
                                 <th class="border-bottom p-3">ID</th>
                                 <th class="border-bottom p-3">Name</th>
-                                <th class="border-bottom p-3">Type</th>
-                                <th class="border-bottom p-3">Consultant</th>
-                                <th class="border-bottom p-3">Contact Number</th>
-                                <th class="border-bottom p-3">BBWS ID</th>
+                                <th class="border-bottom p-3">Phone</th>
+                                <th class="border-bottom p-3">Address</th>
+                                <th class="border-bottom p-3">Email</th>                                
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($archive as $archives)
+                            @foreach ($office as $offices)
                                 <tr>
-                                    <td>{{ $archives->id }}</td>
-                                    <td>{{ $archives->name }}</td>
-                                    <td>{{ $archives->type }}</td>
-                                    <td>{{ $archives->consultant }}</td>
-                                    <td>{{ $archives->contract_number }}</td>
-                                    <td>{{ $archives->bbws_office_id }}</td>
+                                    <td>{{ $offices->id }}</td>
+                                    <td>{{ $offices->name }}</td>
+                                    <td>{{ $offices->phone }}</td>
+                                    <td>{{ $offices->address }}</td>
+                                    <td>{{ $offices->email }}</td>                                    
                                     <td>
-                                        <a href="{{ route('user.archive.edit', [$archives->id]) }}" class="btn btn-info">Edit</a>
-                                        <form action="{{ route('user.archive.destroy', $archives->id) }}" method="POST"
+                                        {{-- <a href="{{  route('admin.office.edit', [$offices->id]) }}" class="btn btn-info">Edit</a> --}}
+                                        <form action="{{ route('user.archive.destroy', $offices->id) }}" method="POST"
                                             id="delete-form">
                                             @csrf
                                             @method('DELETE')

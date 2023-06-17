@@ -11,9 +11,10 @@ class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */
+     */ 
     public function index()
     {
+
         $users = User::all();
 
         $data['users'] = $users;
@@ -73,6 +74,12 @@ class UserController extends Controller
         if ($request->password) {
             $user->password = Hash::make($request->password);
         }
+        $user->nip = $request->nip;
+        $user->phone = $request->phone;
+        $user->role = $request->role;
+        $user->division_id = $request->division_id;
+        $user->bbwsc_office_id = $request->bbwsc_office_id;
+
         $user->save();
 
         return redirect(route('admin.user.index'));

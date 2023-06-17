@@ -24,7 +24,7 @@ class ArchiveController extends Controller
      */
     public function create()
     {
-        // return view('user.archive.create');
+        return view('archive.create');
     }
 
     /**
@@ -32,7 +32,16 @@ class ArchiveController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Archive::Create([
+            'name' => $request->name,
+            'type' => $request->type,            
+            'consultant' => $request->consultant,
+            'contract_number' => $request->contract_number,
+            'bbws_office_id' => $request->bbws_office_id
+
+        ]);
+
+        return redirect(route('user.archive.index'));
     }
 
     /**

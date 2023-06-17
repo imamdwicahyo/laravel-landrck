@@ -19,48 +19,48 @@
             <div class="col-lg-12 mt-4">
                 <div class="card rounded shadow">
                     <div class="p-4 border-bottom">
-                        <h5 class="title mb-0"> Edit Data Archive </h5>
+                        <h5 class="title mb-0"> Create Data Archive </h5>
                     </div>
 
                     <div class="p-4">
 
-                        <form action="{{ route('user.archive.update', [$archive->id]) }}" method="post">
+                        <form action="{{ route('user.archive.store') }}" method="post">
                             @csrf
-                            @method('PUT')
+                            {{-- @method('PUT') --}}
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Name <span class="text-danger">*</span></label>
                                         <input name="name" id="name" type="text" class="form-control"
-                                            placeholder="Name" value="{{ $archive->name }}">
+                                            placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Type <span class="text-danger">*</span></label>
                                         <input name="type" id="type" type="text" class="form-control"
-                                            placeholder="Type" value="{{ $archive->type }}">
+                                            placeholder="Type">
                                     </div>
                                 </div>                                
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Consultant <span class="text-danger">*</span></label>
                                         <input name="consultant" id="consultant" type="text" class="form-control"
-                                            placeholder="Consultant" value="{{ $archive->consultant }}">
+                                            placeholder="Consultant">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Contact Number <span class="text-danger">*</span></label>
                                         <input name="contract_number" id="contract_number" type="text" class="form-control"
-                                            placeholder="Contract Number" value="{{ $archive->contract_number }}">
+                                            placeholder="Contract Number">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Asal BBWS <span class="text-danger">*</span></label>
                                         <input name="bbws_office_id" id="bbws_office_id" type="text" class="form-control"
-                                            placeholder="Bbws Office Id" value="{{ $archive->bbws_office_id }}">
+                                            placeholder="Bbws Office Id">
                                     </div>
                                 </div>
                             </div>
